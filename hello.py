@@ -1,27 +1,16 @@
-print"hello munna bhaiya"
-# Program to check if a number is prime or not
-
-num = 29
-
-# To take input from the user
-#num = int(input("Enter a number: "))
-
-# define a flag variable
-flag = False
-
-if num == 1:
-    print(num, "is not a prime number")
-elif num > 1:
-    # check for factors
-    for i in range(2, num):
-        if (num % i) == 0:
-            # if factor is found, set flag to True
-            flag = True
-            # break out of loop
-            break
-
-    # check if flag is True
-    if flag:
-        print(num, "is not a prime number")
-    else:
-        print(num, "is a prime number")
+# factorial of given number
+def factorial(n):
+ if n < 0:
+   return 0
+ elif n == 0 or n == 1:
+   return 1
+ else:
+   fact = 1
+   while(n > 1):
+    fact *= n
+    n -= 1
+   return fact
+# Driver Code
+num = 5
+print("Factorial of",num,"is",
+factorial(num))
